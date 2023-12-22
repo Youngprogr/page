@@ -1,0 +1,241 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --color-texto: #011627;
+    --color-fondo: #f8f9fa;
+    --color-primario: #0466c8;
+    --color-secundario: #d5d9d3;
+    --fuente-grande: 4.1rem;
+    --fuente-p: 1rem;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+  
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all ease 0.55s;
+    margin-top: 22px; /* Añadido para dar un margen superior */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--color-texto);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo i {
+    vertical-align: middle;
+    color: var(--color-primario);
+    font-size: 27px;
+    margin-right: 5px;
+}
+
+.listanav {
+    display: flex;
+}
+
+.listanav a {
+    font-size: var(--fuente-p);
+    color: var(--color-texto);
+    font-weight: 600;
+    margin: 0 35px;
+    transition: all ease 0.55s;
+}
+
+.listanav a:hover {
+    color: var(--color-primario);
+}
+
+.listanav a.activo {
+    color: var(--color-primario);
+}
+
+.nav-derecha {
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    color: var(--color-fondo);
+    background: var(--color-primario);
+    font-size: 14px;
+    font-weight: 500;
+    border: 2px solid var(--color-primario);
+    border-radius: 5px;
+    margin-right: 5px;
+    transition: all ease 0.55s;
+}
+
+.nav-btn:hover {
+    background: transparent;
+    border: 2px solid var(--color-texto);
+    color: var(--color-texto);
+}
+
+#darkmode {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--color-texto);
+    margin-left: 15px;
+}
+section{
+    padding: 0 10%;
+}
+
+.contenido{
+    position: relative;
+    width: 100%;
+    height: 100vb;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    align-items: center;
+}
+.contenido-img{
+    height: 550px;
+    width: 550px;
+    margin-left: 140px; 
+}
+
+.contenido-img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    
+
+}
+
+.contenido-in{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+.contenido-texto h1{
+    font-size: var(--fuente-grande);
+    height: 1.3;
+    font-weight: 800;
+    margin-top: 30px; 
+   
+}
+
+.contenido-texto h4{
+    margin: 2px 0 20px;
+    color: var(--color-primario);
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    
+
+}
+
+.contenido-texto p{
+    margin: 2px 0 20px;
+    color: var(--color-primario);
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-weight: 200;
+}
+.contenedor{
+    background-color: var(--color-secundario);
+    padding: 25px 40px;
+    border-radius: 1rem;
+    box-shadow: rgba(33, 35, 38, 0.5) 0px 10px 10px -10px;
+    transition: all ease .55s;
+    cursor: pointer;
+}
+.contenedor img{
+    max-width: 100%;
+    height: auto;
+}
+.contenedor h3{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.contenedor h5{
+    color: var(--color-primario);
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 4px;
+}
+
+.contenedor:hover{
+    transform: translateY(-5px)scale(1.1);
+}
+.flecha{
+    position: absolute;
+    bottom: 3.3rem;
+    right: 9%;
+}
+
+.flecha i{
+    padding: 12px;
+    color: var(--color-fondo);
+    background: var(--color-texto);
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 3rem;
+    transition: all ease .55s;
+}
+
+.flecha i:hover{
+    background: var(--color-primario);
+}
+body.color{
+    --color-texto: #f8f9fa;
+    --color-fondo: #011627;
+    --color-primario: #0466c8;
+    --color-secundario: #0d1b2a;
+}
+/* Agrega este estilo al final de tu archivo styles.css */
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Asegura que el menú esté encima de otros elementos */
+}
+
+.submenu li {
+    display: block;
+}
+
+.submenu li a {
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.listanav li:hover .submenu {
+    display: block;
+}
